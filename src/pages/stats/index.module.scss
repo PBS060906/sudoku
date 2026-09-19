@@ -1,0 +1,191 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  padding-bottom: $spacing-xl;
+}
+
+.header {
+  padding: $spacing-lg $page-padding $spacing-md;
+  background: linear-gradient(180deg, $color-bg-gradient-top 0%, $color-bg-page 100%);
+}
+
+.headerTitle {
+  display: block;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.headerDesc {
+  display: block;
+  margin-top: 8rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.emptyCard {
+  margin: $spacing-lg $page-padding;
+  padding: $spacing-xl $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emptyEmoji {
+  font-size: 80rpx;
+}
+
+.emptyTitle {
+  margin-top: $spacing-md;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.emptyDesc {
+  margin-top: $spacing-xs;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.summary {
+  margin: 0 $page-padding;
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.summaryItem {
+  flex: 1;
+  padding: $spacing-md 0;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summaryValue {
+  font-size: 36rpx;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  line-height: 1.2;
+}
+
+.summaryValueAccent {
+  font-size: 36rpx;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  line-height: 1.2;
+}
+
+.summaryLabel {
+  margin-top: 6rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  white-space: nowrap;
+}
+
+.miniRow {
+  margin: $spacing-md $page-padding 0;
+  display: flex;
+  gap: $spacing-md;
+}
+
+.miniItem {
+  flex: 1;
+  padding: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.miniValue {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+  max-width: 100%;
+}
+
+.miniLabel {
+  margin-top: 6rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  white-space: nowrap;
+}
+
+.section {
+  padding: 0 $page-padding;
+}
+
+.levelCard {
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.levelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.levelNameWrap {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin-right: $spacing-sm;
+}
+
+.levelName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.levelRate {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-text-secondary;
+}
+
+.track {
+  margin-top: $spacing-sm;
+  height: 12rpx;
+  border-radius: $radius-round;
+  background: $color-bg-hover;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: $radius-round;
+  transition: width $transition-slow;
+}
+
+.levelFoot {
+  margin-top: $spacing-sm;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  white-space: nowrap;
+}

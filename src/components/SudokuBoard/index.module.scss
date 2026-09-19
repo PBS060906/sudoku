@@ -1,0 +1,194 @@
+@use '@/styles/variables.scss' as *;
+
+.board {
+  position: relative;
+  width: 638rpx;
+  height: 638rpx;
+  display: grid;
+  border: 4rpx solid var(--lineStrong);
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: var(--boardBg);
+  box-shadow: $shadow-card;
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1rpx solid var(--line);
+  border-bottom: 1rpx solid var(--line);
+  background: var(--boardBg);
+  transition: background $transition-fast;
+}
+
+.thickRight {
+  border-right: 3rpx solid var(--lineStrong);
+}
+
+.thickBottom {
+  border-bottom: 3rpx solid var(--lineStrong);
+}
+
+// 高亮层级：选中 > 错误 > 同数 > 同伴
+.peer {
+  background: var(--peerBg);
+}
+
+.same {
+  background: var(--sameBg);
+}
+
+.selected {
+  background: var(--selBg);
+}
+
+.wrong {
+  background: var(--wrongBg);
+}
+
+.digit {
+  font-size: var(--cellFont);
+  line-height: 1;
+}
+
+.givenText {
+  color: var(--cellText);
+  font-weight: $font-weight-bold;
+}
+
+.userText {
+  color: var(--userText);
+  font-weight: $font-weight-semibold;
+}
+
+.hintText {
+  color: var(--hintText);
+  font-weight: $font-weight-semibold;
+}
+
+.wrongText {
+  color: var(--wrongText);
+}
+
+.notes {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  padding: 4rpx;
+}
+
+.noteDigit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--noteFont);
+  color: var(--noteText);
+  line-height: 1;
+}
+
+// 各规格字号
+.font4 {
+  --cellFont: 56rpx;
+  --noteFont: 26rpx;
+}
+
+.font6 {
+  --cellFont: 44rpx;
+  --noteFont: 22rpx;
+}
+
+.font9 {
+  --cellFont: 40rpx;
+  --noteFont: 18rpx;
+}
+
+// 暂停遮罩
+.pauseOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: var(--overlayBg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pauseEmoji {
+  font-size: 72rpx;
+}
+
+.pauseText {
+  margin-top: $spacing-sm;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: var(--cellText);
+}
+
+.resumeButton {
+  margin-top: $spacing-lg;
+  padding: 0 $spacing-xl;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resumeButtonText {
+  color: #ffffff;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+// 三种棋盘主题
+.themeClassic {
+  --boardBg: #ffffff;
+  --line: #d4d8e3;
+  --lineStrong: #374151;
+  --cellText: #1f2937;
+  --userText: #4f46e5;
+  --hintText: #0d9488;
+  --selBg: #e0e7ff;
+  --peerBg: #f1f3ff;
+  --sameBg: #c7d2fe;
+  --wrongBg: #fee2e2;
+  --wrongText: #dc2626;
+  --noteText: #6b7280;
+  --overlayBg: rgba(255, 255, 255, 0.96);
+}
+
+.themeMidnight {
+  --boardBg: #111827;
+  --line: #374151;
+  --lineStrong: #9ca3af;
+  --cellText: #e5e7eb;
+  --userText: #a5b4fc;
+  --hintText: #5eead4;
+  --selBg: #4338ca;
+  --peerBg: #1e293b;
+  --sameBg: #3730a3;
+  --wrongBg: #7f1d1d;
+  --wrongText: #fca5a5;
+  --noteText: #94a3b8;
+  --overlayBg: rgba(17, 24, 39, 0.96);
+}
+
+.themeMatcha {
+  --boardBg: #f7faf5;
+  --line: #cddcc9;
+  --lineStrong: #3f6212;
+  --cellText: #1f2937;
+  --userText: #15803d;
+  --hintText: #0f766e;
+  --selBg: #dcfce7;
+  --peerBg: #f0fdf4;
+  --sameBg: #bbf7d0;
+  --wrongBg: #fee2e2;
+  --wrongText: #dc2626;
+  --noteText: #6b7280;
+  --overlayBg: rgba(247, 250, 245, 0.96);
+}

@@ -1,0 +1,45 @@
+// ============================================
+// 主题配色变量 —— 数独时光（靛蓝墨色系）
+// ============================================
+
+// 品牌主题色
+$color-primary: #4f46e5;
+$color-primary-light: #6366f1;
+$color-primary-dark: #4338ca;
+
+// 辅助强调色
+$color-accent: #f59e0b;
+$color-accent-light: #fbbf24;
+
+// 功能色
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-error: #ef4444;
+$color-info: #4f46e5;
+
+// 背景色
+$color-bg-page: #f4f5fb;
+$color-bg-gradient-top: #eceeff;
+$color-bg-card: #ffffff;
+$color-bg-hover: #f2f3f5;
+
+// 文本色
+$color-text-primary: #1d2129;
+$color-text-secondary: #4e5969;
+$color-text-tertiary: #86909c;
+$color-text-disabled: #c9cdd4;
+$color-text-white: #ffffff;
+
+// 边框色
+$color-border: #e5e6eb;
+$color-divider: #f2f3f5;
+
+// 数独业务色
+$color-board-given: #1f2937; // 题目数字
+$color-board-user: #4f46e5; // 玩家填入
+$color-board-hint: #0d9488; // 提示填入
+$color-wrong-bg: #fee2e2;
+$color-wrong-text: #dc2626;
+$color-selected-bg: #e0e7ff;
+$color-peer-bg: #eef2ff;
+$color-same-bg: #c7d2fe;

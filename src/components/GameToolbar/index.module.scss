@@ -1,0 +1,49 @@
+@use '@/styles/variables.scss' as *;
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: $spacing-xs;
+}
+
+.item {
+  flex: 1;
+  height: 104rpx;
+  border-radius: $radius-md;
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+
+  &:active {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+}
+
+.itemActive {
+  background: $color-primary;
+
+  .icon,
+  .label {
+    color: #ffffff;
+  }
+}
+
+.itemDisabled {
+  opacity: 0.35;
+}
+
+.icon {
+  font-size: 34rpx;
+  line-height: 1.2;
+}
+
+.label {
+  margin-top: 6rpx;
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}

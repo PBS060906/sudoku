@@ -1,0 +1,258 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  padding-bottom: $spacing-xl;
+}
+
+.header {
+  padding: $spacing-lg $page-padding $spacing-md;
+  background: linear-gradient(180deg, $color-bg-gradient-top 0%, $color-bg-page 100%);
+}
+
+.headerTitle {
+  display: block;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.headerDesc {
+  display: block;
+  margin-top: 8rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.section {
+  padding: 0 $page-padding;
+}
+
+.ruleCard {
+  display: flex;
+  align-items: flex-start;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.ruleIcon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-md;
+  background: $color-peer-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  flex-shrink: 0;
+}
+
+.ruleBody {
+  flex: 1;
+  padding-left: $spacing-md;
+}
+
+.ruleTitle {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.ruleDesc {
+  display: block;
+  margin-top: 6rpx;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.techniqueCard {
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.techniqueHead {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.techniqueName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.techniqueTag {
+  margin-left: $spacing-sm;
+  font-size: $font-size-xs;
+  color: $color-primary;
+  background: $color-peer-bg;
+  border-radius: $radius-xs;
+  padding: 2rpx 12rpx;
+}
+
+.techniqueTagHard {
+  color: $color-error;
+  background: $color-wrong-bg;
+}
+
+.techniqueDesc {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.labCard {
+  padding: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.labIntro {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.typeRow {
+  display: flex;
+  gap: 8rpx;
+  margin-top: $spacing-md;
+}
+
+.typeCell {
+  flex: 1;
+  height: 88rpx;
+  border-radius: $radius-sm;
+  background: $color-selected-bg;
+  border: 2rpx solid $color-primary-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.75;
+  }
+}
+
+.typeCellEmpty {
+  background: $color-bg-hover;
+  border-color: $color-border;
+}
+
+.typeCellWrong {
+  background: $color-wrong-bg;
+  border-color: $color-wrong-text;
+}
+
+.typeCellText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.typeCellEmpty .typeCellText {
+  color: $color-text-tertiary;
+}
+
+.typeCellWrong .typeCellText {
+  color: $color-wrong-text;
+}
+
+.console {
+  margin-top: $spacing-md;
+  border-radius: $radius-md;
+  background: #1e293b;
+  padding: $spacing-md;
+}
+
+.consoleHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-sm;
+}
+
+.consoleTitle {
+  font-size: $font-size-xs;
+  color: #94a3b8;
+}
+
+.consoleActions {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.consoleLink {
+  font-size: $font-size-xs;
+  color: #a5b4fc;
+}
+
+.consoleOk {
+  font-size: $font-size-xs;
+  color: #6ee7b7;
+  line-height: $line-height-normal;
+}
+
+.consoleError {
+  font-size: $font-size-xs;
+  color: #fca5a5;
+  line-height: $line-height-normal;
+}
+
+.codeScroll {
+  margin-top: $spacing-md;
+  border-radius: $radius-md;
+  background: #0f172a;
+  padding: $spacing-md;
+  white-space: nowrap;
+}
+
+.codeText {
+  font-size: $font-size-xs;
+  color: #c4b5fd;
+  line-height: 1.7;
+}
+
+.practiceCard {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  border-radius: $radius-lg;
+  box-shadow: 0 8rpx 24rpx rgba(79, 70, 229, 0.24);
+}
+
+.practiceInfo {
+  flex: 1;
+}
+
+.practiceTitle {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: #ffffff;
+}
+
+.practiceDesc {
+  display: block;
+  margin-top: 6rpx;
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.practiceArrow {
+  font-size: 48rpx;
+  color: #ffffff;
+  padding-left: $spacing-sm;
+}

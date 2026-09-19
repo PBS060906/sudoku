@@ -1,0 +1,33 @@
+@use '@/styles/variables.scss' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: $spacing-lg 0 $spacing-md;
+}
+
+.indicator {
+  width: 8rpx;
+  height: 32rpx;
+  border-radius: $radius-round;
+  background: linear-gradient(180deg, $color-primary-light 0%, $color-primary 100%);
+  margin-right: $spacing-sm;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  line-height: $line-height-tight;
+}
+
+.desc {
+  margin-top: 4rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}

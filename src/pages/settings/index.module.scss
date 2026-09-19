@@ -1,0 +1,200 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  padding-bottom: $spacing-xl;
+}
+
+.header {
+  padding: $spacing-lg $page-padding $spacing-md;
+  background: linear-gradient(180deg, $color-bg-gradient-top 0%, $color-bg-page 100%);
+}
+
+.headerTitle {
+  display: block;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.headerDesc {
+  display: block;
+  margin-top: 8rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.section {
+  padding: 0 $page-padding;
+}
+
+.card {
+  padding: 0 $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.divider {
+  height: 1rpx;
+  background: $color-divider;
+}
+
+.themeRow {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.themeItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swatch {
+  width: 100%;
+  height: 120rpx;
+  border-radius: $radius-lg;
+  border: 4rpx solid transparent;
+  box-shadow: $shadow-card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-base;
+}
+
+.swatchActive {
+  border-color: $color-primary;
+}
+
+.swatchInner {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: $radius-sm;
+  border: 2rpx solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.themeLabel {
+  margin-top: $spacing-sm;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.themeLabelActive {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+.optionBlock {
+  padding: $spacing-md 0;
+}
+
+.optionLabel {
+  display: block;
+  margin-bottom: $spacing-sm;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.chip {
+  padding: 0 $spacing-md;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  background: $color-bg-hover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chipActive {
+  background: $color-selected-bg;
+}
+
+.chipText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  white-space: nowrap;
+}
+
+.chipTextActive {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+.actionRow {
+  min-height: 96rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionText {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.actionStatus {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.actionArrow {
+  font-size: 40rpx;
+  color: $color-text-tertiary;
+}
+
+.creditCard {
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.creditHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.creditRepo {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.creditLinkIcon {
+  font-size: 26rpx;
+}
+
+.creditDesc {
+  display: block;
+  margin-top: 8rpx;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.creditUrl {
+  display: block;
+  margin-top: 8rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  @include text-ellipsis;
+}
+
+.version {
+  display: block;
+  text-align: center;
+  margin: $spacing-lg 0 0;
+  font-size: $font-size-xs;
+  color: $color-text-disabled;
+}

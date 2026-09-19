@@ -1,0 +1,59 @@
+@use '@/styles/variables.scss' as *;
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 96rpx;
+  padding: $spacing-sm 0;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-right: $spacing-md;
+}
+
+.label {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+}
+
+.desc {
+  margin-top: 4rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  line-height: $line-height-normal;
+}
+
+.switch {
+  width: 88rpx;
+  height: 48rpx;
+  border-radius: $radius-round;
+  background: #d4d7e0;
+  position: relative;
+  transition: background $transition-base;
+  flex-shrink: 0;
+}
+
+.switchOn {
+  background: $color-primary;
+}
+
+.knob {
+  position: absolute;
+  top: 4rpx;
+  left: 4rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.18);
+  transition: transform $transition-base;
+}
+
+.knobOn {
+  transform: translateX(40rpx);
+}

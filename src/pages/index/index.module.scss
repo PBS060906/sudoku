@@ -1,0 +1,220 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  padding-bottom: $spacing-xl;
+}
+
+.hero {
+  padding: $spacing-lg $page-padding $spacing-xl;
+  background: linear-gradient(180deg, $color-bg-gradient-top 0%, $color-bg-page 100%);
+}
+
+.heroTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.greeting {
+  display: block;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.dateText {
+  display: block;
+  margin-top: 8rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.streak {
+  display: flex;
+  align-items: center;
+  background: rgba(245, 158, 11, 0.12);
+  border-radius: $radius-round;
+  padding: 8rpx 20rpx;
+}
+
+.streakIcon {
+  font-size: 26rpx;
+  margin-right: 6rpx;
+}
+
+.streakText {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-accent;
+}
+
+.continueCard {
+  margin-top: $spacing-lg;
+  padding: $spacing-md;
+  border-radius: $radius-lg;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  box-shadow: 0 8rpx 24rpx rgba(79, 70, 229, 0.28);
+  display: flex;
+  align-items: center;
+}
+
+.continueInfo {
+  flex: 1;
+  min-width: 0;
+  padding-right: $spacing-md;
+}
+
+.continueTitle {
+  display: block;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: #ffffff;
+}
+
+.continueMeta {
+  display: block;
+  margin-top: 8rpx;
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.continueButton {
+  flex-shrink: 0;
+  padding: 0 $spacing-lg;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+.continueButtonText {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+  white-space: nowrap;
+}
+
+.dailyCard {
+  margin-top: $spacing-md;
+  padding: $spacing-md;
+  border-radius: $radius-lg;
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+  display: flex;
+  align-items: center;
+}
+
+.dailyIcon {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: $radius-md;
+  background: rgba(245, 158, 11, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dailyEmoji {
+  font-size: 36rpx;
+}
+
+.dailyBadge {
+  flex-shrink: 0;
+  min-width: 72rpx;
+  height: 48rpx;
+  padding: 0 $spacing-sm;
+  border-radius: $radius-round;
+  background: $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dailyBadgeDone {
+  background: $color-success;
+}
+
+.dailyBadgeText {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: #ffffff;
+}
+
+.content {
+  padding: 0 $page-padding;
+}
+
+.sizeTabs {
+  display: flex;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  padding: 6rpx;
+  margin-bottom: $spacing-md;
+}
+
+.sizeTab {
+  flex: 1;
+  height: 64rpx;
+  border-radius: $radius-button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-base;
+}
+
+.sizeTabActive {
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+}
+
+.sizeTabText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.sizeTabTextActive {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+.quickStats {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.quickStatItem {
+  flex: 1;
+  padding: $spacing-md 0;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quickStatValue {
+  font-size: 40rpx;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.quickStatValueAccent {
+  font-size: 40rpx;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.quickStatLabel {
+  margin-top: 6rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
