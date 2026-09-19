@@ -57,6 +57,11 @@
   box-shadow: 0 8rpx 24rpx rgba(79, 70, 229, 0.28);
   display: flex;
   align-items: center;
+  transition: transform $transition-fast;
+
+  &:active {
+    transform: scale(0.985);
+  }
 }
 
 .continueInfo {
@@ -102,13 +107,31 @@
 }
 
 .dailyCard {
+  position: relative;
   margin-top: $spacing-md;
   padding: $spacing-md;
+  padding-left: $spacing-lg;
   border-radius: $radius-lg;
   background: $color-bg-card;
   box-shadow: $shadow-card;
   display: flex;
   align-items: center;
+  transition: transform $transition-fast;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24rpx;
+    bottom: 24rpx;
+    width: 6rpx;
+    border-radius: 0 6rpx 6rpx 0;
+    background: $color-accent;
+  }
+
+  &:active {
+    transform: scale(0.985);
+  }
 }
 
 .dailyIcon {

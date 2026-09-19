@@ -82,36 +82,29 @@ export interface EngineSettings {
 }
 
 // --------------------------------------------
-// 编译期类型实验室（typescript-sudoku 致敬部分）
+// 编译期类型实验室（致敬 typescript-sudoku）
+// 让 TypeScript 类型检查器在编译期校验数独行
 // --------------------------------------------
 
-type Equal<X, Y> =
-  (<T>() => T extends X ? 1 : 2) extends (<T>() => T extends Y ? 1 : 2) ? true : false;
-
+/** 递归判断 Item 是否出现在 List 中 */
 type Includes<List extends readonly unknown[], Item> =
   List extends readonly [infer Head, ...infer Rest]
-    ? Equal<Head, Item> extends true
+    ? Item extends Head
       ? true
       : Includes<Rest, Item>
     : false;
 
+/** 所有元素均为 true 时返回 true */
 type AllTrue<List extends readonly boolean[]> = List[number] extends true ? true : false;
 
 /**
- * 编译期校验：一行（9 个字面量）是否恰好包含 1~9 各一次。
- * 任意重复、遗漏或越界数字都会让该类型解析为 false，
- * 再配合 Assert<> 在编译期直接报错。
+ * 编译期校验：一行 9 个数字是否恰好包含 1~9 各一次。
+ * 任意重复、遗漏或越界都会让结果为 false，配合 Assert<> 在编译期直接报错。
  */
 export type IsCompleteDigitRow<Row extends readonly Digit[]> = AllTrue<[
-  Includes<Row, 1>,
-  Includes<Row, 2>,
-  Includes<Row, 3>,
-  Includes<Row, 4>,
-  Includes<Row, 5>,
-  Includes<Row, 6>,
-  Includes<Row, 7>,
-  Includes<Row, 8>,
-  Includes<Row, 9>
+  Includes<Row, 1>, Includes<Row, 2>, Includes<Row, 3>,
+  Includes<Row, 4>, Includes<Row, 5>, Includes<Row, 6>,
+  Includes<Row, 7>, Includes<Row, 8>, Includes<Row, 9>
 ]>;
 
 /** 断言为 true，否则编译失败 —— 类型检查器即数独检查器 */
